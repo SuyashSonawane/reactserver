@@ -36,5 +36,5 @@ app.post('/add' , (req,res) =>
     }).catch(err => {res.status(400).json('unable to submit')})
     
 })
-app.listen(process.env.Port || '3000', ()=>{console.log("Done!")})
+app.listen(process.env.PORT || '3000', () => { console.log("Done!", process.env.PORT)})
 
