@@ -22,7 +22,7 @@ app.get('/' , (req , res) =>
 {
     pg('mytable').orderBy('id', 'desc').then(data => { res.send(data) })
     // pg.select('*').from('mytable').then(data=>{res.send(data)}) normal data but for desc former is better
-    res.send("its working")
+    
 })
 
 app.post('/add' , (req,res) =>
