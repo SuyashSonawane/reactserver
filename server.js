@@ -7,10 +7,8 @@ const knex = require('knex');
 const pg = knex({
         client: 'pg',
         connection: {
-        host: '127.0.0.1',
-        user: 'postgres',
-        password: 'psqlpass', 
-        database: 'viewsdb'
+        connectionString :process.env.DATABASE_URL,
+        ssl:true
     }
 });
 
