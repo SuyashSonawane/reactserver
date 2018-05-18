@@ -32,7 +32,7 @@ app.post('/add' , (req,res) =>
         name:name,
         email:email,
         views:views
-    }).catch(err => {res.status(400).json('unable to submit')}).then(console.log("got the info")).then(res=> {res.send("got the info")})
+    }).catch(err => {res.status(400).json('unable to submit')}).then(console.log("got the info")).then(data => {res.send('got info')})
     
 })
 app.listen(process.env.PORT || '3000', () => { console.log("Done!", process.env.PORT)})
